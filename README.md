@@ -4,7 +4,7 @@ My codes about Synapse Prediction, Synaptic Partner Prediction and Synapse Clust
 # NMJ
 ## Plot segment
 write python animation codes
-[Dense segment](https://github.com/james20141606/Summer_Intern/tree/master/NMJ/plot_segment)
+<img src="https://github.com/james20141606/Summer_Intern/tree/master/NMJ/plot_segment/output.gif" style="width: 10px;"/>
 
 # Synapse Prediction
 ## data augmentation
