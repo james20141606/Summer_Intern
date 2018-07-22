@@ -33,3 +33,4 @@ $$L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + 
 ## deep learning based clustering
 
 
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
