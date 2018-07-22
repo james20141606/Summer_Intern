@@ -12,13 +12,13 @@ write python animation codes
 # Synapse Prediction
 ## data augmentation
 - simple augmentation
-!{](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/simple.png)
+![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/simple.png)
 - elastic augmentation
-!{](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/elastic.png)
+![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/elastic.png)
 - intensity augmentation
-!{](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/intensity.png)
+![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/intensity.png)
 - defect augmentation
-!{](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/defect.png)
+![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/defect.png)
 
 ## newtwork architecture improvement
 - Dink-net Dilation
