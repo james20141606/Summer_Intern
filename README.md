@@ -18,6 +18,13 @@ write python animation codes
 <img src="http://chart.googleapis.com/chart?cht=tx&chl= L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)" style="border:none;">
 $$L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)$$
 
+<img src="http://latex.codecogs.com/gif.latex?L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)" />
+
+作者：Deep Reader
+链接：https://www.zhihu.com/question/26887527/answer/43166739
+来源：知乎
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
 - network visualization
 ![network](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png)
 
