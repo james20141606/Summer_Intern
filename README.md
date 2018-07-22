@@ -19,10 +19,10 @@ write python animation codes
 - Dink-net Dilation
 - **Loss**: P: predict result, GT: ground truth, N: batch size
 
-<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/loss.png" style="width: 5px;"/>
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/loss.png" style="width: 2px;"/>
 
 - network visualization
-<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png" style="width: 6px;"/>
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png" style="width: 2px;"/>
 
 # Synaptic Partner Prediction 
 ## metrics study
