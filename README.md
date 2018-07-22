@@ -15,9 +15,11 @@ write python animation codes
 ## newtwork architecture improvement
 - Dink-net dilation
 - loss: P: predict result, GT: ground truth, N: batch size
+
 $$L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)$$
+
 - network visualization
-[](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png)
+![network](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png)
 
 # Synaptic Partner Prediction 
 ## metrics study
