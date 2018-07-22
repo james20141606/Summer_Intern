@@ -19,7 +19,7 @@ write python animation codes
 ![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/loss.png)
 
 - network visualization
-![network](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png =500x50)
+![network](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png)
 
 # Synaptic Partner Prediction 
 ## metrics study
