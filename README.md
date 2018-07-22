@@ -15,7 +15,7 @@ write python animation codes
 ## newtwork architecture improvement
 - Dink-net dilation
 - loss: P: predict result, GT: ground truth, N: batch size
-
+<img src="http://chart.googleapis.com/chart?cht=tx&chl= L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)" style="border:none;">
 $$L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)$$
 
 - network visualization
