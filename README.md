@@ -16,9 +16,7 @@ write python animation codes
 - Dink-net dilation
 - loss: P: predict result, GT: ground truth, N: batch size
 
-$$L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)$$
-
-<img src="http://latex.codecogs.com/gif.latex?L = 1 - \frac{2 \times \sum_{i=1}^N  |P_i \cap GT_i  | }{\sum_{i=1}^N  (P_i + GT_i)} + \sum_{i=1}^N BCELoss(P_i,  GT_i)" />
+![](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/loss.png)
 
 - network visualization
 ![network](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/Digraph.gv-1.png)
