@@ -8,6 +8,35 @@ write python animation codes
 ## Seeding on Masks
 ![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot_segment/seeding.png)
 
+## Automatically skeletonize and segmentation
+
+
+Since NMJ project contains a very large volume EM data which has some serious problems to process it automatically(hard to align, image quality is not good, axons travel fast). The project progress seems really slow. There are about 200 NMJs, and we should generate about 200 masks, each mask may contain 300 sections. So the manually seeding and segment work seems really challenging and time-consuming. I am considering to do it more automatically.
+
+## Pipeline
+The complete pipeline should contain: 
+**Generating Masks —> Seeding —> Predict Membrane —> Expand Seeds —> Merge different Masks**
+
+We would like to build up the whole pipeline, prepare all the codes and model for prediction and processing and write down the protocol.
+
+### Predict Membrane
+The automatically prediction parts must include membrane prediction, because it is “easier” to predict since the raw image already have the membrane.
+
+###  Automatically seeding
+The traditional way is to manually put seeds on each axon, but we have approximately 50,000 sections if all masks are generated, it is so time-consuming to manually put seeds. I will g**enerate seeds by distance transformation from membrane**
+
+Then the seeds must be indexed to track each seed is from which axon, so we will manually put seeds  per 100 sections, then do **Hungarian matching.**
+
+- Merge masks
+We are thinking about linear interpolation to merge anchor sections for loop problems.
+
+## Algorithm
+### Predict Membrane
+Use 3D U-net using contours from dense segmentation sections. Use 50 sections for training, then predict more, proofread predicted sections to generate more training samples. **The iterative training and predicting method will make the model more precise.**
+### Automatically seeding
+- Distance transformation
+- Hungarian matching
+
 
 # Synapse Prediction
 ## data augmentation
