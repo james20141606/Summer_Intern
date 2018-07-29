@@ -33,6 +33,12 @@ We are thinking about linear interpolation to merge anchor sections for loop pro
 ## Algorithm
 ### Predict Membrane
 Use 3D U-net using contours from dense segmentation sections. Use 50 sections for training, then predict more, proofread predicted sections to generate more training samples. **The iterative training and predicting method will make the model more precise.**
+
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/focalloss.png" style="width: 2px;"/>
+
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/focaldiceloss.png" style="width: 2px;"/>
+
+
 ### Automatically seeding
 - Distance transformation
 - Hungarian matching
@@ -54,6 +60,10 @@ Use 3D U-net using contours from dense segmentation sections. Use 50 sections fo
 - **Loss**: P: predict result, GT: ground truth, N: batch size
 
 <img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/loss.png" style="width: 2px;"/>
+
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/focalloss.png" style="width: 2px;"/>
+
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/focaldiceloss.png" style="width: 2px;"/>
 
 DICE_BCE loss, not fully trained.
 ![DICE_BCE](https://github.com/james20141606/Summer_Intern/blob/master/synapse_prediction/plot/trainloss.png)
