@@ -27,11 +27,17 @@ The automatically prediction parts must include membrane prediction, because it 
 ![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/trainloss.png)
 
 - visualize output during training(Use TensorboardX)
+
 EM image
+
 ![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/em.png)
+
 Ground truth image
+
 ![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/gt.png)
+
 Predict image
+
 ![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/predict.png)
 
 It seems the training is quite well after only thousands batches within one hour.
