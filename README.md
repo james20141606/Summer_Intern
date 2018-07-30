@@ -22,6 +22,20 @@ We would like to build up the whole pipeline, prepare all the codes and model fo
 ### Predict Membrane
 The automatically prediction parts must include membrane prediction, because it is “easier” to predict since the raw image already have the membrane.
 
+#### training steps
+- train loss
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/trainloss.png style="width: 2px;"/>
+
+- visualize output during training(Use TensorboardX)
+EM image
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/em.png style="width: 2px;"/>
+Ground truth image
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/gt.png style="width: 2px;"/>
+Predict image
+<img src="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/predict.png style="width: 2px;"/>
+
+It seems the training is quite well after only thousands batches within one hour.
+
 ###  Automatically seeding
 The traditional way is to manually put seeds on each axon, but we have approximately 50,000 sections if all masks are generated, it is so time-consuming to manually put seeds. I will g**enerate seeds by distance transformation from membrane**
 
