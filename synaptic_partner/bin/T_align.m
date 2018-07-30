@@ -4,11 +4,12 @@ nn={'A','B','C','A+','B+','C+'};
 bb={[143],[1,29,30,58,59,91],[28,88,100],...
     [65,93,94,122,123,125],[1,29,30,58,59,91],[28,88,100]};
 % to be replaced
-bb={[143],[1,29,30,58,59,91],[28,88,100],...
 gg={[142],[0,28,31,57,60,90],[27,87,99],...
     [64,92,95,121,124,126],[0,28,31,57,60,90],[27,87,99]};
 % newly-aligned image size
 sz={[1727,1842],[2069,1748],[1986,2036],[1741,1912],[2898,1937],[1914,1983]};
+
+tid=1
 
 % CREMI: 125,250,1250
 % _v2_200: 200 margin from manual label
@@ -17,16 +18,19 @@ case 1 % orig -> align_v2_200 (translation)
     switch tid
     case 1 % gray image
         for nid=1:numel(nn)
+            
             vol = nn{nid}
+            disp(vol)
             sn='05';if numel(vol)==2;sn='06';end
             oo=23; if strcmp(vol,'A');oo=24;end
             pw=0;ph=0; if vol(1)=='B';ph=200;if numel(vol)==2;ph=700;end;end 
-            im = h5read([D0 'images/sample_' vol '_padded_2016' sn '01.hdf'],'/volumes/raw');
-            pp=cumsum(load(['align/trans_' vol '_v2.txt']),1);
+            disp(['cremi/images/sample_' vol '_padded_2016' sn '01.hdf'])
+            im = h5read(['cremi/images/sample_' vol '_padded_2016' sn '01.hdf'],'/volumes/raw');
+            pp=cumsum(load(['cremi/align/trans_' vol '_v2.txt']),1);
             pp=-bsxfun(@minus,pp,pp(77,:));
             %ww=200;suf='v2';
             ww = ceil([max(pp) -min(pp)])+200;suf='v2_200';
-            out=zeros([1250+sum(ww([1,3])),1250+sum(ww([2,4])),153],'uint8');
+            out=zeros([1250+sum(ww([1,3])),1250+sum(ww([2,4])),153]);%,'uint8');
             for i=1:153
                 pd = round(pp(i,:)); 
                 im2 = padarray(im(:,:,oo+i),[ph,pw],'symmetric','both');
@@ -34,11 +38,15 @@ case 1 % orig -> align_v2_200 (translation)
                                 (912+pd(2)-ww(2)+pw):(911+pd(2)+1250+ww(4)+pw)); 
             end
             out(:,:,bb{nid}+1)=out(:,:,gg{nid}+1);
-            %U_h5write(['images/im_' sprintf('%s_%s.h5',vol,suf)],'/main',out);
+            
+            %disp(unique(out-im))
+            h5create(['cremi/images/im_' sprintf('%s_%s.h5',vol,suf)],'/main',size(out));
+            h5write(['cremi/images/im_' sprintf('%s_%s.h5',vol,suf)],'/main',out);
         end
     case 1.1 % seg/syn
         for nid=1:3
             vol = nn{nid}
+            disp(vol)
             sn='05';if numel(vol)==2;sn='06';end
             oo=23; if strcmp(vol,'A');oo=24;end
             syn = h5read([D0 'images/sample_' vol '.hdf'],'/volumes/labels/clefts');
@@ -64,8 +72,8 @@ case 1 % orig -> align_v2_200 (translation)
             end
             seg_o(:,:,bb{nid}+1)=seg_o(:,:,gg{nid}+1);
             syn_o(:,:,bb{nid}+1)=syn_o(:,:,gg{nid}+1);
-            %U_h5write(['../data/cremi/align_v2/seg_' sprintf('%s_%s.h5',vol,suf)],'/main',seg_o,5,'uint64');
-            %U_h5write(['../data/cremi/align_v2/syn_' sprintf('%s_%s.h5',vol,suf)],'/main',syn_o,5,'uint16');
+            U_h5write(['../data/cremi/align_v2/seg_' sprintf('%s_%s.h5',vol,suf)],'/main',seg_o,5,'uint64');
+            U_h5write(['../data/cremi/align_v2/syn_' sprintf('%s_%s.h5',vol,suf)],'/main',syn_o,5,'uint16');
         end
     end
 case 2 % align_v2_200 (translation) -> orig
