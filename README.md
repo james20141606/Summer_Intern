@@ -4,7 +4,7 @@ My codes about Synapse Prediction, Synaptic Partner Prediction and Synapse Clust
 # NMJ
 ## reconstruction
 
-https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/animation.gif
+![](https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/animation.gif)
 
 ## Plot segment
 write python animation codes
