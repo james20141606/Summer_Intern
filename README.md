@@ -2,6 +2,10 @@
 My codes about Synapse Prediction, Synaptic Partner Prediction and Synapse Clustering during summer intern in Lichtman Lab
 
 # NMJ
+## reconstruction
+
+https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot/animation.gif
+
 ## Plot segment
 write python animation codes
 <img src="https://github.com/james20141606/Summer_Intern/blob/master/NMJ/plot_segment/output.gif" style="width: 10px;"/>
