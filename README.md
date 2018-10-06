@@ -1,5 +1,10 @@
 # Summer_Intern
-My codes about Synapse Prediction, Synaptic Partner Prediction and Synapse Clustering during summer intern in Lichtman Lab
+My codes in
+- **Neural Muscular Junction**
+- **Synapse Prediction**
+- **Synaptic Partner Prediction**
+- **Synapse Clustering**
+project during summer intern in [Lichtman Lab](https://lichtmanlab.fas.harvard.edu/)
 
 # NMJ
 ## reconstruction
